@@ -1,0 +1,243 @@
+ .card {
+     position: relative;
+     height: 60vh;
+     width: 80%;
+     box-shadow: 0 0 1.5rem rgba(0, 0, 0, 0.25);
+     overflow: hidden;
+     margin: 0rem 3rem;
+ }
+
+ .card::before {
+     content: "";
+     position: absolute;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+     background-size: cover;
+     transition: all 0.25s ease;
+     z-index: -1;
+ }
+
+ /* .card{
+     background-image: url("../images/Rectangle\ 19.png");
+     background-repeat: no-repeat;
+     background-size: 100% 100%;
+
+ } */
+
+
+ .card .card-content {
+     display: flex;
+     height: 100%;
+     width: 100%;
+     padding: 1.5rem;
+     justify-content: center;
+     align-items: center;
+     flex-direction: column;
+     z-index: 1;
+     color: #fff;
+     transition: background-color 0.25s ease, opacity 0.25s ease;
+     opacity: 0;
+     cursor: pointer;
+ }
+
+ .card .card-content .title {
+     font-size: 1.5rem;
+     margin-bottom: 1rem;
+     font-weight: 600;
+ }
+
+ /* .card .card-content p {
+     text-align: center;
+     font-weight: 200;
+ } */
+
+ .card:hover:before {
+     transform: scale(1.2);
+ }
+
+ .card:hover .card-content {
+     opacity: 1;
+     background-color: rgba(0, 0, 0, 0.5);
+     backdrop-filter: blur(8px);
+ }
+
+ @media (max-width: 768px) {
+
+     .card {
+         height: 50vh;
+         width: 100%;
+        text-align: center;
+        margin: 0rem auto;
+         /* flex-wrap: wrap  !important; */
+     }
+
+     .box {
+         padding: 0.4rem 0.4rem !important;
+         margin: 0.2rem !important
+     }
+
+     .xxl {
+         padding: 0.4rem 0.3rem !important;
+         margin-left: 0.1rem !important
+     }
+     .viewBtn{
+        margin-left: 10rem !important;
+        padding: 0.4rem 1.5rem !important;
+     }
+
+     .card::before {
+         background-position: center;
+     }
+ }
+
+ @media only screen and (min-width: 993px) and (max-width: 1400px) {
+     .card {
+         height: 40vh !important ;
+        width: 100% !important;
+        margin: 0rem 0rem !important;
+         float:left !important;
+
+
+     }
+
+     .box {
+         padding: 0.2rem 0.2rem !important;
+         margin: 0rem !important;
+     }
+
+     .xxl {
+         padding: 0.2rem 0.2rem!important ;
+         margin: 0rem !important;
+        
+     }
+ }
+ @media only screen and (min-width: 769px) and (max-width: 992px) {
+    .card {
+        height: 30vh !important ;
+       width: 100% !important;
+       text-align: center;
+        margin: 0rem auto;
+    }
+  .productCard{
+    height: 50vh !important ;
+    width: 100% !important;
+    text-align: center;
+     margin: 0rem auto;
+  }
+
+    .box {
+        padding: 0.1rem 0.1rem !important;
+        margin: 0rem !important;
+    }
+
+    .xxl {
+        padding: 0.1rem 0.1rem!important ;
+        margin: 0rem !important;
+       
+    }
+    .viewBtn{
+        margin-left: 15rem !important;
+       
+     }
+}
+ .cost {
+     font-weight: bolder;
+     font-size: 20px;
+ }
+
+ .costOld {
+     color: red;
+     font-size: 12px;
+     text-decoration: line-through;
+ }
+
+ .box {
+     border: 1px solid black;
+     padding: 0.6rem 0.6rem;
+     margin: 0.5rem
+ }
+
+ .xxl {
+     border: 1px solid black;
+     padding: 0.6rem 0.3rem;
+     margin-left: 0.5rem
+ }
+
+ .mainBox {
+     margin: 1rem;
+ }
+
+ .productCard {
+     position: relative;
+     height: 65vh;
+     width: 100%;
+     box-shadow: 0 0 1.5rem rgba(0, 0, 0, 0.25);
+     overflow: hidden;
+     margin: 1rem 3rem;
+ }
+
+ .productCard::before {
+     content: "";
+     position: absolute;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+     background-size: cover;
+     transition: all 0.25s ease;
+     z-index: -1;
+ }
+
+ .productCard:hover:before {
+     transform: scale(1.2);
+ }
+
+ .productCard:hover .card-content {
+     opacity: 1;
+     background-color: rgba(0, 0, 0, 0.5);
+     transform: scale(1.9);
+ }
+
+ .productCard .card-content {
+     display: flex;
+     height: 100%;
+     width: 100%;
+     padding: 1.5rem;
+     justify-content: center;
+     align-items: center;
+     flex-direction: column;
+     z-index: 1;
+     color: #fff;
+     transition: background-color 0.25s ease, opacity 0.25s ease;
+     opacity: 0;
+     cursor: pointer;
+ }
+ @media only screen and (min-width: 992px) and (max-width: 1400px) {
+    .productCard{
+        height: 50vh !important ;
+        width: 100% !important;
+        text-align: center;
+         margin: 2rem auto;
+      }
+    
+ }
+ @media only screen and (min-width: 768px) and (max-width: 991px) {
+    .productCard{
+        height: 30vh !important ;
+        width: 100% !important;
+        text-align: center;
+         margin: 2rem auto;
+      }
+    
+ }
+ @media only screen and (max-width: 768px) {
+    .productCard{
+        height: 40vh !important ;
+        width: 100% !important;
+        text-align: center;
+         margin: 1rem auto;
+      }
+    
+ }
